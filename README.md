@@ -1,5 +1,7 @@
 # envconfigfromfile
 
+[![Build Status](https://travis-ci.org/marzagao/envconfigfromfile.svg?branch=master)](https://travis-ci.org/marzagao/envconfigfromfile)
+
 My colleague @adammck found that:
 
 > long environment variables can be stored in `/etc/environment`, but `pam_env` (which is responsible for loading those into the shell when a user logs) has a bug which causes it to truncate lines longer than 1024 bytes.
