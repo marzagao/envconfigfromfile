@@ -1,0 +1,8 @@
+language: go
+install:
+  - make testdeps
+script:
+  - make test
+go:
+  - 1.7.3
+  - tip
