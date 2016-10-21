@@ -1,8 +1,11 @@
 language: go
-install:
-  - make testdeps
-script:
-  - make test
+sudo: false
 go:
   - 1.7.3
   - tip
+install:
+  - make testdeps
+script:
+  - make lint coverage
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

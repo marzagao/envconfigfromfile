@@ -1,6 +1,7 @@
 # envconfigfromfile
 
 [![Build Status](https://travis-ci.org/marzagao/envconfigfromfile.svg?branch=master)](https://travis-ci.org/marzagao/envconfigfromfile)
+[![codecov](https://codecov.io/gh/marzagao/envconfigfromfile/branch/master/graph/badge.svg)](https://codecov.io/gh/marzagao/envconfigfromfile)
 
 My colleague @adammck found that:
 
@@ -12,7 +13,7 @@ So to simplify the loading of environment variables longer than 1024 bytes using
 
 Given that:
 * The `TEST_FIELD_FILE_PATH` environment variable has the value "contents.txt"
-* The file `contents.txt` has the value `some-content`
+* The file `contents.txt` contains the text `some-content`
 
 The following program:
 ```go
@@ -35,4 +36,4 @@ func main() {
   fmt.Println(testStruct.TestField.String())
 }
 ```
-Will return `some-content`.
+Will output `some-content`.
