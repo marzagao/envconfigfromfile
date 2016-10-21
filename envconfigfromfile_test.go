@@ -34,7 +34,7 @@ func TestEnvConfigFromFile(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	if testStruct.TestField.Value != string(testFileContents) {
+	if testStruct.TestField.String() != string(testFileContents) {
 		t.Error(err)
 	}
 }
